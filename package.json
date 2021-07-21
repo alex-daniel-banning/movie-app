@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node app.js",
     "app": "nodemon app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -28,6 +28,7 @@
     "validation": "0.0.1"
   },
   "devDependencies": {
+    "mocha": "^9.0.2",
     "nodemon": "^2.0.12"
   }
 }
