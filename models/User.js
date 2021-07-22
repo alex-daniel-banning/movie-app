@@ -38,5 +38,6 @@ const RankedMovieSchema = new mongoose.Schema({
     }
 }, { timestamps: true });
 
-module.exports = User = mongoose.model('User', UserSchema);
-module.exports = RankedMovie = mongoose.model('RankedMovie', RankedMovieSchema);
+User = mongoose.model('User', UserSchema);
+RankedMovie = mongoose.model('RankedMovie', RankedMovieSchema);
+module.exports = { User, RankedMovie };
