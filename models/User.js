@@ -22,8 +22,21 @@ const UserSchema = new mongoose.Schema({
         { type: mongoose.Schema.Types.ObjectId, ref: 'Movie' }
     ],
     favorites_ranked: [
-        { rank: Number, movie: mongoose.Schema.Types.ObjectId, ref: 'Movie' }
+        { type: mongoose.Schema.Types.ObjectId, ref: 'RanedMovie' }
     ]
 }, { timestamps: true });
 
-module.exports = User = mongoose.model('user', UserSchema);
+const RankedMovieSchema = new mongoose.Schema({
+    rank: {
+        type: Number,
+        required: true
+    },
+    movie: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Movie',
+        required: true
+    }
+}, { timestamps: true });
+
+module.exports = User = mongoose.model('User', UserSchema);
+module.exports = RankedMovie = mongoose.model('RankedMovie', RankedMovieSchema);
