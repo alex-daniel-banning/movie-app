@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node app.js",
     "app": "nodemon app.js",
-    "test": "mocha"
+    "test": "mocha --recursive"
   },
   "repository": {
     "type": "git",
@@ -28,7 +28,9 @@
     "validation": "0.0.1"
   },
   "devDependencies": {
+    "chai": "*",
     "mocha": "^9.0.2",
-    "nodemon": "^2.0.12"
+    "nodemon": "^2.0.12",
+    "sinon": "*"
   }
 }
